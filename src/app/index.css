@@ -36,10 +36,6 @@
 .ant-menu-item-disabled{
   color: var(--ant-menu-dark-item-color);
 }
-.ant-menu-inline-collapsed .ant-menu-item,
-.ant-menu-inline-collapsed .ant-menu-submenu-title {
-  padding-inline: calc(50% - 8px) !important;
-}
 
 :where(.css-dev-only-do-not-override-1iftmj9).ant-picker .ant-picker-input > input {
   width: 70px;
