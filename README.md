@@ -18,3 +18,10 @@
 ```bash
 node -v
 npm -v
+
+git clone https://github.com/Nonashimi/test-analytics
+cd test-analytics
+
+npm install
+
+npm run dev
