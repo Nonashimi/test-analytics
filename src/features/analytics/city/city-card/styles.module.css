@@ -1,0 +1,49 @@
+.card {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-black);
+}
+
+.sub_title {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.label {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  text-align: right;
+}
+
+.amount_wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  justify-content: flex-end;
+  margin-top: 2px;
+}
+
+.amount {
+  font-size: 16px;
+  color: var(--color-text-green);
+}
+
+.qty {
+  font-size: 13px;
+  color: var(--color-text-black);
+}
+
+.phone {
+  color: var(--color-text-black)
+}

@@ -1,0 +1,34 @@
+ .block {
+  height: 530px;
+  overflow: hidden;
+}
+
+.block > :global(.ant-card-body) {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+.block :global(.ant-tabs) {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.block :global(.ant-tabs-content-holder) {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.block :global(.ant-tabs-content) {
+  height: 100%;
+}
+
+.block :global(.ant-tabs-tabpane) {
+  height: 100%;
+}

@@ -1,0 +1,46 @@
+.info {
+
+}
+
+.info_title{
+  color: var(--color-text-placeholder);
+}
+
+.info_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.info_amount {
+  font-size: 22px;
+}
+.green {
+  color: var(--color-text-green);
+}
+.purple {
+  color: var(--color-purple);
+}
+
+.arrow {
+  background-color: var(--color-overlay);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.arrow_disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+.arrows {
+  display: flex;
+  gap: 10px
+}
+

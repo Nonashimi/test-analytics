@@ -1,0 +1,17 @@
+export const chartData = [
+  { date: '01.02.26', dateValue: new Date("2026-02-01"), current:   50000, previous: 100000, returns:       0 },
+  { date: '03.02.26', dateValue: new Date("2026-02-03"), current:  200000, previous:  30000, returns:       0 },
+  { date: '05.02.26', dateValue: new Date("2026-02-05"), current:  350000, previous: 350000, returns:       0 },
+  { date: '07.02.26', dateValue: new Date("2026-02-07"), current:  100000, previous: 500000, returns:       0 },
+  { date: '09.02.26', dateValue: new Date("2026-02-09"), current: 2000000, previous: 450000, returns:       0 },
+  { date: '11.02.26', dateValue: new Date("2026-02-11"), current:  400000, previous: 250000, returns:       0 },
+  { date: '13.02.26', dateValue: new Date("2026-02-13"), current:  500000, previous: 150000, returns:       0 },
+  { date: '15.02.26', dateValue: new Date("2026-02-15"), current:  100000, previous: 100000, returns:       0 },
+  { date: '17.02.26', dateValue: new Date("2026-02-17"), current:  600000, previous:  50000, returns:       0 },
+  { date: '19.02.26', dateValue: new Date("2026-02-19"), current: 1700000, previous:  50000, returns:  400000 },
+  { date: '21.02.26', dateValue: new Date("2026-02-21"), current:  350000, previous:      0, returns:  900000 },
+  { date: '23.02.26', dateValue: new Date("2026-02-23"), current:  950000, previous:      0, returns:  350000 },
+  { date: '25.02.26', dateValue: new Date("2026-02-25"), current:  100000, previous:      0, returns:       0 },
+  { date: '27.02.26', dateValue: new Date("2026-02-27"), current:   50000, previous:      0, returns: 1800000 },
+  { date: '28.02.26', dateValue: new Date("2026-02-28"), current: 2000000, previous:      0, returns:  400000 },
+];

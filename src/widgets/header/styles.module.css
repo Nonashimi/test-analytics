@@ -1,0 +1,40 @@
+.header {
+  background-color:  var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 24px;
+  border-bottom: 1px var(--color-divider) solid;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  box-sizing: border-box;
+}
+.header>img{
+  cursor: pointer;
+}
+
+.header_center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+}
+.header_right {
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+.header_profile{
+  width: 30px;
+  height: 30px;
+  background-color: var(--color-primary-hover);
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.header_profile img{
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}

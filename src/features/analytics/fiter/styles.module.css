@@ -1,0 +1,21 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 180px;
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+.trigger {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+
+.item_flex {
+  display: flex;
+  align-items: center;
+}

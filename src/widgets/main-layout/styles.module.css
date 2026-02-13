@@ -1,0 +1,14 @@
+.layout {
+  min-height: 100vh;
+  background-color: var(--color-bg) !important;
+}
+
+.content {
+  padding-top: 53px;
+  transition: padding-left .3s;
+  background-color: var(--color-bg) !important;
+}
+
+.main {
+  background-color: var(--color-bg) !important;
+}
