@@ -2,6 +2,7 @@ import { Card } from "antd";
 import { Line, XAxis, CartesianGrid, Area, ComposedChart, ResponsiveContainer, ReferenceLine } from 'recharts';
 import styles from "./styles.module.css";
 import { chartData } from "../../../../app/const/charts";
+import React, { useMemo } from "react";
 
 const C_BLUE   = "#007AFF";
 const C_YELLOW = "#FFCC00";
@@ -13,24 +14,32 @@ type Props = {
   dateRange?: [Date, Date] | null;
 };
 
-export const ChartLines = ({ dateRange }: Props) => {
+const formatNumber = (num: number) => {
+  if (num)
+    return new Intl.NumberFormat('ru-RU').format(num) + ' ₸';
+};
+
+export const ChartLines = React.memo(({ dateRange }: Props) => {
   const data = dateRange
     ? chartData.filter(item => item.dateValue >= dateRange[0] && item.dateValue <= dateRange[1])
     : chartData;
 
-  const currentTotal = data.reduce((sum, item) => sum + item.current, 0);
-  const previousTotal = data.reduce((sum, item) => sum + item.previous, 0);
-  const returnsTotal = data.reduce((sum, item) => sum + item.returns, 0);
+  const currentTotal = useMemo(() => {
+    return data.reduce((sum, item) => sum + item.current, 0);
+  },[data]);
+  const previousTotal = useMemo(() => {
+    return data.reduce((sum, item) => sum + item.previous, 0);
+  },[data]);
+  const returnsTotal = useMemo(() => {
+    return data.reduce((sum, item) => sum + item.returns, 0);
+  },[data]);
+ 
   const maxValue = 2000000;
   const currentDays = data.length;
   const previousDays = 154;
   const returnsDays = 3;
 
 
-  const formatNumber = (num: number) => {
-    if (num)
-      return new Intl.NumberFormat('ru-RU').format(num) + ' ₸';
-  };
   return(
     <Card className={styles.card}>
       <div>
@@ -145,4 +154,4 @@ export const ChartLines = ({ dateRange }: Props) => {
       </div>
     </Card>
   );
-}
+});
