@@ -22,7 +22,7 @@ export const SelectsConst:TMySelect[] = [
   },
   {
     icon: <DateIcon/>,
-    title: "Календарь",
+    title: "Дата",
     isCalendar: true,
   }
 ];

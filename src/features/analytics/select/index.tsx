@@ -5,7 +5,7 @@ import type { FC } from "react";
 import type { Dayjs } from "dayjs";
 import SuffixIcon from "@/assets/icons/suffix.svg?react";
 import styles from "./styles.module.css";
-import type { TOptions } from "../../../../app/const/selects/type";
+import type { TOptions } from "../../../app/const/selects/type";
 import dayjs from "dayjs";
 import customParseFormat from "dayjs/plugin/customParseFormat";
 
@@ -23,10 +23,12 @@ type Props = {
 
 const { RangePicker } = DatePicker;
 
+const defaultRange: RangeValue = [dayjs("2026-02-01"), dayjs("2026-02-28")];
+
 export const SelectUi: FC<Props> = ({ icon, options, isCalendar, title, onDateChange }) => {
   const [open, setOpen] = useState(false);
-  const [confirmedValue, setConfirmedValue] = useState<RangeValue>(null);
-  const pendingRef = useRef<RangeValue>(null);
+  const [confirmedValue, setConfirmedValue] = useState<RangeValue>(defaultRange);
+  const pendingRef = useRef<RangeValue>(defaultRange);
   const autoCloseRef = useRef(false);
 
   const handleCalendarChange = (val: RangeValue) => {
@@ -79,16 +81,20 @@ export const SelectUi: FC<Props> = ({ icon, options, isCalendar, title, onDateCh
           onCalendarChange={(val) => handleCalendarChange(val as RangeValue)}
           suffixIcon={<SuffixIcon />}
           className={styles.block_select}
-          format="MM.DD.YYYY"
+          format="MM.DD.YY"
+          placeholder={["mm.dd.yy", "mm.dd.yy"]}
+          separator={<div className={styles.separator} />}
           renderExtraFooter={() => (
-            <Button
-              type="primary"
-              size="small"
-              style={{ margin: "8px 0" }}
-              onClick={handleOk}
-            >
-              ОК
-            </Button>
+            <div style={{ display: "flex", justifyContent: "flex-end" }}>
+              <Button
+                type="primary"
+                size="small"
+                style={{ margin: "8px 0" }}
+                onClick={handleOk}
+              >
+                ОК
+              </Button>
+            </div>
           )}
         />
       )}

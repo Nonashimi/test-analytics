@@ -38,7 +38,7 @@
 }
 
 :where(.css-dev-only-do-not-override-1iftmj9).ant-picker .ant-picker-input > input {
-  width: 70px;
+  width: 55px;
 }
 .css-var-root.ant-card {
   --ant-card-body-padding: 15px;
@@ -91,4 +91,16 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-
+.ant-picker:hover,
+.ant-picker-focused {
+  background-color: transparent !important;
+}
+:where(.css-dev-only-do-not-override-1iftmj9).ant-picker-range .ant-picker-range-separator {
+  padding: 0;
+}
+:where(.css-dev-only-do-not-override-1iftmj9).ant-picker .ant-picker-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8px
+}

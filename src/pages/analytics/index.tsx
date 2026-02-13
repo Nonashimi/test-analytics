@@ -4,7 +4,7 @@ import { SelectsConst } from "../../app/const/selects";
 import { MainLayout } from "../../widgets/main-layout";
 import styles from "./styles.module.css";
 import type { FC } from "react";
-import { SelectUi } from "./ui/select";
+import { SelectUi } from "../../features/analytics/select";
 import { AnalyticsPageContent } from "./ui/content";
 
 export const AnalyticsPage: FC = () => {
